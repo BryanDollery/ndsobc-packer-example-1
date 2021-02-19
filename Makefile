@@ -1,4 +1,5 @@
 OWNER=005508785137
+NAME=bryan
 
 default: pack
 
@@ -11,7 +12,7 @@ pack:
 		   --name "$$(basename $$PWD)" \
 		   -w /$$(basename $$PWD) \
 		   --entrypoint="/usr/local/bin/packer" \
-		   bryandollery/terraform-packer-aws-alpine build -var="owner=$$OWNER" -var="name=bryan" packer.pkr.hcl
+		   bryandollery/terraform-packer-aws-alpine build -var="owner=$$OWNER" -var="name=$$NAME" packer.pkr.hcl
 
 fmt:
 	docker container run -it --rm \
@@ -22,7 +23,7 @@ fmt:
 		   --name "$$(basename $$PWD)" \
 		   -w /$$(basename $$PWD) \
 		   --entrypoint="/usr/local/bin/packer" \
-		   bryandollery/terraform-packer-aws-alpine fmt -var="owner=$$OWNER" -var="name=bryan" packer.pkr.hcl
+		   bryandollery/terraform-packer-aws-alpine fmt -var="owner=$$OWNER" -var="name=$$NAME" packer.pkr.hcl
 
 inspect:
 	docker container run -it --rm \
@@ -33,5 +34,5 @@ inspect:
 		   --name "$$(basename $$PWD)" \
 		   -w /$$(basename $$PWD) \
 		   --entrypoint="/usr/local/bin/packer" \
-		   bryandollery/terraform-packer-aws-alpine inspect -var="owner=$$OWNER" -var="name=bryan" packer.pkr.hcl
+		   bryandollery/terraform-packer-aws-alpine inspect -var="owner=$$OWNER" -var="name=$$NAME" packer.pkr.hcl
 
