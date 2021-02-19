@@ -63,13 +63,9 @@ build {
     destination = "/home/ubuntu/"
     source      = "./provision.sh"
   }
-
-/* 
- * If not spinning up a container and working on Windows, you might have to change
- * this and use script mode:- script = "./provision.sh"
- */
+  
   provisioner "shell" {
-    inline = ["/home/ubuntu/provision.sh"]
+    script = "./provision.sh"
   }
 
   provisioner "file" {
