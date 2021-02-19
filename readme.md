@@ -6,10 +6,10 @@ Make driven packer configuration for the sandbox AMI
 
 ### Usage
 ```
-make pack
+make
 ```
 
-### dependencies
+#### Dependencies
 You must have a file, creds/credentials of the format:
 
 ```
