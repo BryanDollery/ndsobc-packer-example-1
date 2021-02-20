@@ -1,5 +1,4 @@
 variable "owner" {
-  default = env("OWNER")
 }
 
 variable "name" {
