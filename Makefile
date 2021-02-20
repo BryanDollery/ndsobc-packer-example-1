@@ -48,3 +48,5 @@ inspect:
 		   --entrypoint="/usr/local/bin/packer" \
 		   bryandollery/terraform-packer-aws-alpine inspect -var="owner=$$OWNER" -var="name=$$NAME" packer.pkr.hcl
 
+stop:
+	        docker rm -f "$$(basename $$PWD)" 2> /dev/null || true
